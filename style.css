@@ -1,0 +1,199 @@
+/* Base (Mobile First) */
+body {
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #002aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 8px;
+}
+h1 {
+    color: white;
+    font-size: clamp(20px, 6vw, 28px);
+    margin: 0;
+    text-align: center;
+}
+
+.banner {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+.banner img {
+    width: 100vw;
+    height: 28vw;
+    min-height: 140px;
+    max-height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+section {
+    background-color: white;
+    padding: 0;
+}
+.first, .second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 18px 0;
+}
+.first img, .second img {
+    aspect-ratio: 1 / 1;
+    width: clamp(75px, 22vw, 120px);
+    object-fit: cover;
+    border-radius: 18px;
+    flex: 1 1 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: width 0.3s, height 0.3s;
+}
+.more {
+    text-align: center;
+    font-size: clamp(22px, 8vw, 28px);
+    color: #002aff;
+    font-weight: bold;
+    margin: 16px 0;
+}
+footer {
+    background-color: #002aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+footer p {
+    color: white;
+    font-size: clamp(14px, 4vw, 19px);
+    margin: 0;
+    text-align: center;
+}
+
+
+@media (min-width: 520px) {
+    header {
+        height: 50px;
+        background-color: #1fc84e;
+        
+    }
+    h1 {
+        color:white;
+        font-size: clamp(28px, 4vw, 36px);
+    }
+    body{background-color:#e0eafc ;}
+    section {
+        background-color: #e0eafc;
+    }
+    .first, .second {
+        flex-direction: row;
+        gap: 32px;
+    }
+    .first img, .second img {
+        width: clamp(110px, 17vw, 170px);
+        min-width: 100px;
+        max-width: 220px;
+    }
+    .more {
+        font-size: clamp(32px, 6vw, 38px);
+        color: #1fc84e;
+    }
+    footer {
+        background-color: #1fc84e;
+        height: 70px;
+    }
+    footer p {
+        font-size: clamp(18px, 3vw, 24px);
+    }
+}
+
+/* Desktop: ≥760px */
+@media (min-width: 760px) {
+    header {
+        height: 70px;
+        background-color: #540d6e; /* Distinct purple */
+    }
+    h1 {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: clamp(36px, 5vw, 44px);
+    }
+    body{background-color: #ffe5d9;}
+    section {
+        background-color: #ffe5d9;
+    }
+    .banner img {
+        height: 280px;
+        min-height: 220px;
+        max-height: 340px;
+    }
+    .first, .second {
+        gap: 56px;
+    }
+    .first img, .second img {
+        width: clamp(150px, 13vw, 240px);
+        min-width: 140px;
+        max-width: 260px;
+    }
+    .more {
+        font-size: clamp(46px, 4vw, 55px);
+        color: #540d6e;
+    }
+    footer {
+        background-color: #540d6e;
+        height: 90px;
+    }
+    footer p {
+        font-size: clamp(22px, 2vw, 30px);
+    }
+}
+
+/* Large Desktop: ≥1024px */
+@media (min-width: 910px) {
+    header {
+        height: 100px;
+        background-color: #ff9800; /* Distinct orange */
+    }
+    h1 {
+        color:white;
+        font-size: clamp(48px, 4vw, 58px);
+    }
+    .banner img {
+        height: 340px;
+        min-height: 270px;
+        max-height: 420px;
+    }
+    .first, .second {
+        gap: 90px;
+    }
+    .first img, .second img {
+        width: clamp(190px, 13vw, 320px);
+        min-width: 180px;
+        max-width: 340px;
+    }
+    .more {
+        font-size: clamp(54px, 3vw, 70px);
+        color: #ff9800;
+    }
+    body{
+        background-color: #fff3e0;
+    }
+    section {
+        background-color: #fff3e0;
+    }
+    footer {
+        background-color: #ff9800;
+        height: 120px;
+    }
+    footer p {
+        font-size: clamp(26px, 2vw, 38px);
+    }
+}
